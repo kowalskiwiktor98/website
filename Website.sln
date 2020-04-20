@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio", "Portfolio\Portfolio.csproj", "{7564C832-DB00-4FF3-B8C0-37F30C21FBE7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitRecognition", "DigitRecognition\DigitRecognition.csproj", "{D3171675-6429-4BDF-8922-F081B21F1C2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7564C832-DB00-4FF3-B8C0-37F30C21FBE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7564C832-DB00-4FF3-B8C0-37F30C21FBE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7564C832-DB00-4FF3-B8C0-37F30C21FBE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3171675-6429-4BDF-8922-F081B21F1C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3171675-6429-4BDF-8922-F081B21F1C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3171675-6429-4BDF-8922-F081B21F1C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3171675-6429-4BDF-8922-F081B21F1C2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
