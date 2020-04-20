@@ -1,6 +1,6 @@
 using System;
 
-namespace Portfolio.Data
+namespace Website.Data
 {
     public class WeatherForecast
     {
