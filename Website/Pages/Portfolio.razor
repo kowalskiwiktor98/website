@@ -1,4 +1,6 @@
 ﻿@page "/portfolio"
+@inject IJSRuntime jsRuntime
+@inject NavigationManager NavigationManager
 
 <h3>Portfolio</h3>
 
@@ -6,13 +8,42 @@ Work in progress
 
 <p>Here i will show my favorites projects from my <a href="https://github.com/kowalskiwiktor98">github</a> profile</p>
 
-<ul style="column-count:3">
-    <li style="outline:thick">
-        <h4>Boids 2D in Unity</h4>
-        <img src="~/boidsPreview.gif" alt="Boids 2D" width="75" height="75"/>
-    </li>
-</ul>
+<Row Margin="Margin.IsAuto.OnY">
+    <Card Margin="Margin.Is4.OnY" Style="width: 30%;">
+        <CardImage Source="/boidsPreview.gif" Alt="Placeholder image">
+        </CardImage>
+        <CardBody>
+            <CardTitle Size="5">Boids</CardTitle>
+            <CardText>
+                Example of bird flocking behaviour made in Unity.
+            </CardText>
+            <Button Color="Color.Primary" @onclick="preview_boids">See it live</Button>
+            <Button Color="Color.Primary" @onclick="github_boids">Source code</Button>
+        </CardBody>
+    </Card>
+    <Card Margin="Margin.Is4.OnY" Style="width: 30%;">
+        <CardImage Source="" Alt="Placeholder image">
+        </CardImage>
+        <CardBody>
+            <CardTitle Size="5">More to come.</CardTitle>
+            <CardText>
+                More previews will be added soon.
+            </CardText>
+            <Button Color="Color.Primary">Button</Button>
+        </CardBody>
+    </Card>
+</Row>
+
+
 
 @code {
+    private async Task github_boids()
+    {
+        await jsRuntime.InvokeAsync<object>("open", "https://github.com/kowalskiwiktor98/boidsSource", "_blank");
+    }
 
+    private async Task preview_boids()
+    {
+        await jsRuntime.InvokeAsync<object>("open", "https://kowalskiwiktor98.github.io/boids/", "_blank");
+    }
 }

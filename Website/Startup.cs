@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Blazorise;
+using Blazorise.Bootstrap;
+using Blazorise.Icons.FontAwesome;
 
 namespace Website
 {
@@ -27,6 +30,9 @@ namespace Website
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddBlazorise();
+            services.AddBootstrapProviders();
+            services.AddFontAwesomeIcons();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +53,10 @@ namespace Website
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.ApplicationServices
+                .UseBootstrapProviders()
+                .UseFontAwesomeIcons();
 
             app.UseEndpoints(endpoints =>
             {
