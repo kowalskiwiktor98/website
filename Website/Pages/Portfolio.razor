@@ -22,14 +22,15 @@ Work in progress
         </CardBody>
     </Card>
     <Card Margin="Margin.Is4.OnY" Style="width: 30%;">
-        <CardImage Source="" Alt="Placeholder image">
+        <CardImage Source="/digit_preview.png" Alt="Placeholder image">
         </CardImage>
         <CardBody>
-            <CardTitle Size="5">More to come.</CardTitle>
+            <CardTitle Size="5">Digit Recognition</CardTitle>
             <CardText>
-                More previews will be added soon.
+                Digit recognition using ML.NET Multiclass Classification
             </CardText>
-            <Button Color="Color.Primary">Button</Button>
+            <Button Color="Color.Primary" @onclick="preview_digit">See it live</Button>
+            <Button Color="Color.Primary" @onclick="github_digit">Source code</Button>
         </CardBody>
     </Card>
 </Row>
@@ -45,5 +46,15 @@ Work in progress
     private async Task preview_boids()
     {
         await jsRuntime.InvokeAsync<object>("open", "https://kowalskiwiktor98.github.io/boids/", "_blank");
+    }
+
+    private async Task github_digit()
+    {
+        //await jsRuntime.InvokeAsync<object>("open", "", "_blank");
+    }
+
+    private async Task preview_digit()
+    {
+        await jsRuntime.InvokeAsync<object>("open", "https://digitrecognitionpreview.azurewebsites.net", "_blank");
     }
 }
